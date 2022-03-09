@@ -1,15 +1,19 @@
 <template>
   <main>
     <px-header />
+    <div class="flex justify-center mt-8">
+      <px-assets-table />
+    </div>
   </main>
 </template>
 
 <script>
 import PxHeader from "@/components/PxHeader";
+import PxAssetsTable from "@/components/PxAssetsTable";
 
 export default {
   name: "app",
-  components: { PxHeader }
+  components: { PxHeader, PxAssetsTable }
 };
 </script>
 

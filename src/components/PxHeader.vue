@@ -5,7 +5,7 @@
         <div class="flex items-center flex-shrink-0 text-white mr-6">
           <px-icon class="mr-2" />
           <span class="font-semibold text-xl tracking-tight"
-            >PlatziExchange</span
+            >Exchange-Crypto</span
           >
         </div>
         <div
