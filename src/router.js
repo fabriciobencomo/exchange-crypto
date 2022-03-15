@@ -12,7 +12,7 @@ export default new Router({
     {
       path: "/",
       name: "Home",
-      component: Home,
+      component: Home
     },
     {
       path: "/about",
@@ -24,5 +24,5 @@ export default new Router({
       name: "Error",
       component: Error
     }
-  ],
+  ]
 });
