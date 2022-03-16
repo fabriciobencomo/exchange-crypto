@@ -1,4 +1,5 @@
 import About from "@/views/About";
+import CoinDetail from "@/views/CoinDetail";
 import Error from "@/views/Error";
 import Home from "@/views/Home";
 import Vue from "vue";
@@ -18,6 +19,11 @@ export default new Router({
       path: "/about",
       name: "About",
       component: About
+    },
+    {
+      path: "/coin/:id",
+      name: "coin-detail",
+      component: CoinDetail
     },
     {
       path: "*",
