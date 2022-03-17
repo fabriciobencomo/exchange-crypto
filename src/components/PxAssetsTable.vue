@@ -3,8 +3,10 @@
     <thead>
       <tr class="bg-gray-100 border-b-2 border-gray-400">
         <th></th>
-        <th :class="{ up: this.sortOrder === 1, down: this.sortOrder === -1}">
-          <span class="underline cursor-pointer" @click="changeSortOder">Ranking</span>
+        <th :class="{ up: this.sortOrder === 1, down: this.sortOrder === -1 }">
+          <span class="underline cursor-pointer" @click="changeSortOder"
+            >Ranking</span
+          >
         </th>
         <th>Nombre</th>
         <th>Precio</th>
@@ -94,8 +96,8 @@ export default {
     goToCoin(id) {
       this.$router.push({ name: "coin-detail", params: { id } });
     },
-    changeSortOder (){
-      this.sortOrder = this.sortOrder === 1 ? -1 : 1
+    changeSortOder() {
+      this.sortOrder = this.sortOrder === 1 ? -1 : 1;
     }
   },
 
@@ -110,16 +112,18 @@ export default {
     filteredAssets() {
       const altOrder = this.order === 1 ? -1 : 1;
 
-      return this.assets.filter(
-        a =>
-          a.symbol.toLowerCase().includes(this.filter.toLowerCase()) ||
-          a.name.toLowerCase().includes(this.filter.toLowerCase())
-      ).sort((a,b) => {
-        if(parseInt(a.rank) > parseInt(b.rank)){
-          return this.sortOrder
-        }
-        return altOrder
-      });
+      return this.assets
+        .filter(
+          a =>
+            a.symbol.toLowerCase().includes(this.filter.toLowerCase()) ||
+            a.name.toLowerCase().includes(this.filter.toLowerCase())
+        )
+        .sort((a, b) => {
+          if (parseInt(a.rank) > parseInt(b.rank)) {
+            return this.sortOrder;
+          }
+          return altOrder;
+        });
     }
   }
 };
